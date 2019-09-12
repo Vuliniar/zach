@@ -1,0 +1,15 @@
+// Basic styles for alert component
+.alert {
+    color: #fff;
+    padding: 7px 10px;
+    font-size: calcRem(22px);
+    border-radius: 6px;
+    margin-top: 5px;
+}
+.warning {
+    background-color: $warning;
+}
+
+.success {
+    background-color: $success;
+}

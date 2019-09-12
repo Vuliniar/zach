@@ -1,0 +1,147 @@
+// Dashboard component
+.dashboard {
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    > h1 {
+        padding: 0 15px;
+    }
+    &__user {
+        &-add {
+            position: relative;
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        &-list {
+            max-height: 300px;
+            overflow-y: auto;
+            li {
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid $dark-grey;
+                cursor: pointer;
+                transition: background-color .2s ease;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                @include hover-active {
+                    background-color: $light-grey;
+                }
+                
+                &.active {
+                    background-color: $light-grey;
+                }
+            }
+        }
+    }
+
+    &__hobby {
+        &-add {
+            display: flex;
+            select {
+                flex: 0 1 25%;
+                max-width: 25%;
+            }
+            input {
+                flex: 0 1 25%;
+                max-width: 25%;
+                &[name="name"] {
+                    flex: 1 1 30%;
+                    max-width: none;
+                    margin: 0 10px;
+                }
+            }
+            button {
+                margin-left: 10px;
+                flex: 0 0 7%;
+                max-width: 7%;
+            }
+
+            @media screen and (max-width: $tablets) {
+                flex-wrap: wrap;
+
+                select,
+                input {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    margin: 0 0 7px;
+                }
+
+                input[name="name"] {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    margin: 0 0 7px;
+                }
+
+                button {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    margin: 0 0 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        &-list {
+            max-height: 300px;
+            overflow-y: auto;
+            li {
+                display: flex;
+                margin-bottom: 7px;
+                span {
+                    flex: 0 1 25%;
+                    max-width: 25%;
+                    text-align: center;
+                    &:nth-child(2) {
+                        flex: 1 1 30%;
+                        max-width: none;
+                        margin: 0 10px;
+                    }
+                    &.dashboard__hobby-delete {
+                        flex: 0 0 7%;
+                        max-width: 7%;
+                        margin-left: 10px;
+                        justify-content: center;
+                        background-color: $warning;
+                        color: #fff;
+                        font-size: calcRem(12px);
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        transition: background-color .2s ease;
+                        cursor: pointer;
+
+                        @include hover-active {
+                            background-color: darken($warning, 5%);
+                        }
+                    }
+                }
+                @media screen and (max-width: $mobiles-xs) {
+                    flex-wrap: wrap;
+                    span {
+                        flex-grow: 1;
+                        max-width: 100%;
+                        &:nth-child(2) {
+                            flex-basis: 25%;
+                            max-width: 100%;
+                        }
+                        &.dashboard__hobby-delete {
+                            flex: 1 1 100%;
+                            max-width: 100%;
+                            margin: 7px 0 15px;
+                            padding: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+// Mixins we're going to use for our project
+@mixin hover-active {
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+}

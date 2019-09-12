@@ -1,0 +1,5 @@
+// Basic functions for our project
+@function calcRem($size) {
+    $remValue: $size / 16px;
+    @return #{$remValue}rem;
+}

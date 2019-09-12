@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "name": "John",
+      "hobbies": [
+        {
+          "passion": "very high",
+          "name": "Developing Backends",
+          "date": "2012"
+        },
+        {
+          "passion": "medium",
+          "name": "Talking with Clients",
+          "date": "2013"
+        },
+        {
+          "passion": "high",
+          "name": "Teaching",
+          "date": "2014"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Peter",
+      "hobbies": [
+        {
+          "passion": "low",
+          "name": "Playing cricket",
+          "date": "2014"
+        },
+        {
+          "passion": "medium",
+          "name": "Coding",
+          "date": "2012"
+        },
+        {
+          "passion": "high",
+          "name": "Teaching",
+          "date": "2009"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Markus",
+      "hobbies": [
+        {
+          "passion": "low",
+          "name": "Playing tournaments",
+          "date": "2010"
+        },
+        {
+          "passion": "high",
+          "name": "Exploring",
+          "date": "2005"
+        },
+        {
+          "passion": "high",
+          "name": "Educating",
+          "date": "2010"
+        }
+      ]
+    }
+  ]
+}
